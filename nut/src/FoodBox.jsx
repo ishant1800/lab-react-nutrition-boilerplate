@@ -3,31 +3,27 @@ import foodData from './resources/FoodData';
 import './FoodBox.css';
 
 function FoodBox() {
-  // Initialize food items with count and total calories
   const initialFoods = foodData.map(food => ({ ...food, count: 0, totalCalories: 0 }));
   const [foods, setFoods] = useState(initialFoods);
   const [searchInput, setSearchInput] = useState('');
 
-  // Update count of a food item
   const updateCount = (e, id) => {
     const inputValue = parseInt(e.target.value) >= 0 ? e.target.value : " ";
     const updatedFoods = foods.map(food => (food.id === id ? { ...food, count: inputValue } : food));
     setFoods(updatedFoods);
   };
 
-  // Calculate total calories for a food item
   const calculateCalories = (id) => {
     const updatedFoods = foods.map(food => (food.id === id ? { ...food, totalCalories: food.count * food.calories } : food));
     setFoods(updatedFoods);
   };
 
-  // Reset count and total calories for a food item
   const resetFoodItem = (id) => {
     const updatedFoods = foods.map(food => (food.id === id ? { ...food, count: 0, totalCalories: 0 } : food));
     setFoods(updatedFoods);
   };
 
-  // Update search input value
+  
   const handleSearchInput = (e) => {
     setSearchInput(e.target.value);
   };
