@@ -17,11 +17,11 @@ body {
 }
 
 .box {
-  background-color: #e3e9e2;
+  background-color: #cce6c7;
   color: black;
   padding: 10px 40px;
   margin: 20px;
-  width: 50vw;
+  width: 65vw;
 }
 
 #resetInfocontainer {
@@ -57,11 +57,11 @@ figure {
 
 input {
   border: 2px solid purple;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 button {
-  color: white;
+  color: rgb(146, 22, 117);
   background-color: purple;
   border-color: purple;
 }
